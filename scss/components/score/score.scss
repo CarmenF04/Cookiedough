@@ -1,0 +1,13 @@
+@use "../../abstracts/colors";
+
+.score{
+    font-size: 300%;
+    color: black;
+    background: whitesmoke;
+    padding: 2rem;
+    border-radius: 1rem;
+    font-weight: 300;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
