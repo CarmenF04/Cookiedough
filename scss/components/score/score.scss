@@ -2,12 +2,13 @@
 
 .score{
     font-size: 300%;
-    color: black;
+    color: map-get(colors.$cookie, "spots");
     background: whitesmoke;
     padding: 2rem;
     border-radius: 1rem;
     font-weight: 300;
-    width: 50%;
+    width: 30%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
