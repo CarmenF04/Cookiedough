@@ -73,7 +73,7 @@ body {
   color: #483434;
 }
 .upgrades__upgrade:hover > i {
-  color: whitesmoke;
+  color: #C19277;
 }
 
 .upgradesMobile {
@@ -200,7 +200,7 @@ body {
   padding: 2rem;
   background: #483434;
   border: 0.5rem solid #483434;
-  color: whitesmoke;
+  color: #C19277;
   border: none;
   width: 20rem;
   transform: translateY(2.5rem);

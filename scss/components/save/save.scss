@@ -6,7 +6,7 @@
     padding: 2rem;
     background: map-get(colors.$cookie, "spots");
     border: 0.5rem solid map-get(colors.$cookie, "spots");
-    color: whitesmoke;
+    color: map-get(colors.$cookie, "background");
     border: none;
     width: 20rem;
     transform: translateY(2.5rem);
