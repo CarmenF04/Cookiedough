@@ -1,14 +1,14 @@
 @use "../../abstracts/colors.scss";
 
 .cookie{
-    width: 35rem;
+    width: 33rem;
     background: map-get(colors.$cookie,"background");
     border-radius: 50%;
     aspect-ratio: 1/1; // Even breed als hoog
     position: relative;
     overflow: hidden;
     box-shadow: 
-        inset 0 0 10rem map-get(colors.$cookie, "spots"),
+        inset 0 0 3rem map-get(colors.$cookie, "spots"),
         0 2rem 1rem 0rem rgba(0,0,0,0.2);
     border: 1rem solid map-get(colors.$cookie, "spots");
     transition: 0.2s all;
@@ -21,12 +21,32 @@
         transform: scale(0.95)
     }
 
+    &--chocolate{
+        background: #3c2a21;
+        box-shadow: 0 2rem 1rem 0rem rgba(0,0,0,0.2);
+        border: 1rem solid #1c0a00;
+    }
+
+    &--velvet{
+        background: #E96479;
+        border: 1rem solid white;
+    }
+
+    &--velvet &__spots{
+        background: white;
+    }
+
+    &--chocolate &__spots{
+        background: #1c0a00;
+        border-radius: 30%;
+    }
+
     &__spots{
-    width: 7rem;
-    aspect-ratio: 1/1;
-    background: map-get(colors.$cookie, "spots");
-    border-radius: 45%;
-    position: absolute;
+        width: 7rem;
+        aspect-ratio: 1/1;
+        background: map-get(colors.$cookie, "spots");
+        border-radius: 45%;
+        position: absolute;
     
         &--first{
             top: 10%;

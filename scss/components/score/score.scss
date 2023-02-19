@@ -1,7 +1,7 @@
 @use "../../abstracts/colors";
 
 .score{
-    font-size: 300%;
+    font-size: 200%;
     color: map-get(colors.$cookie, "spots");
     background: whitesmoke;
     padding: 2rem;

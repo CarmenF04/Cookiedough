@@ -102,13 +102,13 @@ body {
 }
 
 .cookie {
-  width: 33rem;
+  width: 35rem;
   background: #C19277;
   border-radius: 50%;
   aspect-ratio: 1/1;
   position: relative;
   overflow: hidden;
-  box-shadow: inset 0 0 3rem #483434, 0 2rem 1rem 0rem rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 10rem #483434, 0 2rem 1rem 0rem rgba(0, 0, 0, 0.2);
   border: 1rem solid #483434;
   transition: 0.2s all;
 }
@@ -117,22 +117,6 @@ body {
 }
 .cookie:active {
   transform: scale(0.95);
-}
-.cookie--chocolate {
-  background: #3c2a21;
-  box-shadow: 0 2rem 1rem 0rem rgba(0, 0, 0, 0.2);
-  border: 1rem solid #1c0a00;
-}
-.cookie--velvet {
-  background: #E96479;
-  border: 1rem solid white;
-}
-.cookie--velvet .cookie__spots {
-  background: white;
-}
-.cookie--chocolate .cookie__spots {
-  background: #1c0a00;
-  border-radius: 30%;
 }
 .cookie__spots {
   width: 7rem;
@@ -247,7 +231,7 @@ body {
 }
 
 .score {
-  font-size: 200%;
+  font-size: 300%;
   color: #483434;
   background: whitesmoke;
   padding: 2rem;
@@ -291,4 +275,4 @@ body {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=stylecss.map */
