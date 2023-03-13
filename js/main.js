@@ -1,5 +1,5 @@
 class Cookie{
-    naam = "";
+    name = "";
     htmlElement = undefined;
     score = undefined;
     factor = 1;
@@ -57,6 +57,11 @@ class Score{
 
     addPoints(){
         this.score = this.score + 10000
+        this.htmlElement.innerText = this.score;
+    }
+
+    scoreLoaded(newScore){
+        this.score = newScore;
         this.htmlElement.innerText = this.score;
     }
 }    
@@ -124,6 +129,40 @@ class ChocolateCookie{
     }
 }
 
+class Save{
+    htmlElement;
+    score;
+
+    constructor(newHTMLElement, score){
+            this.htmlElement = newHTMLElement;
+            this.htmlElement.onclick = this.onSaveButtonClicked;
+
+    }
+
+    onSaveButtonClicked = () => {
+            window.localStorage.setItem("score", score.score);
+    }
+}
+
+class Load{
+    score;
+
+    constructor(score){
+        this.score = score;
+
+        this.onload();
+    }
+
+    onload = function(){
+        const scoreFromLocalStorage = parseInt(window.localStorage.getItem("score"));
+        if(typeof scoreFromLocalStorage === "number" ){
+            this.score.scoreLoaded(scoreFromLocalStorage); 
+        }
+    }
+}
+
+
+
 class VelvetCookie{
     htmlElement = undefined;
     bought = false;
@@ -155,9 +194,15 @@ const multiplier = new Multiplier(document.getElementById("js--multiplier"), coo
 const auto = new AutoScore(document.getElementById("js--autoScore"), score);
 const chocolate = new ChocolateCookie(document.getElementById("js--chocolate"), cookie);
 const velvet = new VelvetCookie(document.getElementById("js--velvet"), cookie);
+const save = new Save(document.getElementById("js--save"));
+const load = new Load(score);
 
 // Setup Mobile
 const multiplierMobile = new Multiplier(document.getElementById("js--multiplier--mobile"), cookie);
 const autoMobile = new AutoScore(document.getElementById("js--autoScore--mobile"), score)
 const chocolateMobile = new ChocolateCookie(document.getElementById("js--chocolate--mobile"),cookie);
 const velvetMobile = new VelvetCookie(document.getElementById("js--velvet--mobile"), cookie);
+
+// window.localStorage.clear();
+// window.localStorage.setItem("name", "Jeroen");
+// console.log(window.localStorage);
